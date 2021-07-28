@@ -4,4 +4,4 @@
 
 Список задач с возможностью добавления и удаления:
 
-https://zarinamambetova.github.io/vue.js_-todo_list/
+https://zarinamambetova.github.io/vue.js_-todo_list/index.html
