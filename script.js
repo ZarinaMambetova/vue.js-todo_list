@@ -5,13 +5,23 @@ Vue.component('task', {
       this.$emit('task_done');
     }
   },
+  data: function() {
+    return {
+      isActive: false
+    };
+  },
+
   template: `
-      <div class="task">
-        <div>
+      <div class="task" >
+        <div :class="{ active: isActive }">
           <h3 class="task__title">{{data.title}}</h3>
           <p class="task__desc">{{data.desc}}</p>
         </div>
-        <button @click="task_done()" class="task__done">✔️</button>
+        <div>
+          <button class="task__done"  @click="isActive = !isActive">✔️</button>
+          <button @click="task_done()" class="task__done">✖️</button>
+        </div>
+        
       </div>
   `
 });
@@ -36,7 +46,8 @@ var vue = new Vue({
         title: 'Пройти курс',
         desc: 'Записаться в Loftschool'
       }
-    ]
+    ],
+    isActive: false
   },
   methods: {
     delete_task(id) {

@@ -84,3 +84,8 @@
   border-radius: 4px;
   background-color: #2f485811;
 }
+
+.task .active h3,
+.task .active  p {
+  text-decoration: line-through;
+}
